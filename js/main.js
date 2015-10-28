@@ -100,8 +100,10 @@ jQuery(document).ready(function($) {
 	  
 	//COUNTDOWN TIMER
 	var newYear = new Date(); 
-    newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1); 
-    $('#countdown').countdown({until: new Date(2015, 12-1, 18)}); // enter event day 
+    newYear = new Date(2015,11-1,5,8,0,0);
+
+
+    $('#countdown').countdown({until: new Date(2015, 11-1 , 5,8,0,0)}); // enter event day
     
     $('#removeCountdown').toggle(
         function() {
@@ -234,7 +236,7 @@ jQuery(document).ready(function($) {
 	//GOOGLE MAPS
 		  
 	// Creating a LatLng object containing the coordinate for the center of the map
-	var latlng = new google.maps.LatLng(40.801485408197856, -73.96745953467104);
+	var latlng = new google.maps.LatLng(-0.2825427,-78.5495923);
 	  
 	// Creating an object literal containing the properties we want to pass to the map  
 	var options = {  
@@ -251,7 +253,7 @@ jQuery(document).ready(function($) {
 	// Define Marker properties
 	var image = new google.maps.MarkerImage('img/map-logo.png',
 		// This marker is 129 pixels wide by 42 pixels tall.
-		new google.maps.Size(125, 75),
+		new google.maps.Size(300, 300),
 		// The origin for this image is 0,0.
 		new google.maps.Point(0,0),
 		// The anchor for this image is the base of the flagpole at 18,42.
@@ -260,7 +262,7 @@ jQuery(document).ready(function($) {
 	
 	// Add Marker
 	var marker1 = new google.maps.Marker({
-		position: new google.maps.LatLng(40.801485408197856, -73.96745953467104), 
+		position: new google.maps.LatLng(-0.2825427,-78.5495923,384), 
 		map: map,		
 		icon: image // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
 	});	
